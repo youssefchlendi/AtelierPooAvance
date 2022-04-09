@@ -32,7 +32,6 @@ public class Authentification {
 		if (!this.login.equals(this.LoginCorrect)) {
 			throw new wrongUserNameException();
 		}
-        clavier.close();
 	}
     
 	public void getUserPwd() throws wrongInputLength, wrongPasswordException {
@@ -45,8 +44,11 @@ public class Authentification {
 		if (!this.pwd.equals(this.PwdCorrect)) {
 			throw new wrongPasswordException();
 		}
-        clavier.close();
 
+	}
+
+    public static void main(String[] args) {
+		Authentification a = new Authentification();
 	}
 
 
