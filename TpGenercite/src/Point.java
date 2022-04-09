@@ -29,5 +29,14 @@ public class Point<T> {
                 ", abs=" + abs +
                 '}';
     }
-    
+    public static void main(String[] args) throws Exception {
+        Point<Integer> p1 = new Point<>(1,2);
+        Point<Double> p2 = new Point<>(3.0,4.0);
+        Point<String> p3 = new Point<>("a","b");
+        System.out.println(p1);
+        System.out.println(p2);
+        System.out.println(p3);
+    }
+
+   
 }
