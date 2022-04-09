@@ -5,7 +5,21 @@ public class Authentification {
 	private String login,pwd;
 
     public Authentification() {
-		
+		boolean success=false;
+		while(!success) {
+		try {
+			this.getUserLogin();
+			this.getUserPwd();
+			success = true;
+		} catch (wrongUserNameException|wrongPasswordException|wrongInputLength e) {
+			System.out.println(e.getMessage());
+		}
+		}
+		if (success) {
+			System.out.println("Connecté");
+		}else {
+			System.out.println("Non connecté");
+		}
 	}
 
     public void getUserLogin() throws wrongUserNameException, wrongInputLength {
