@@ -8,9 +8,14 @@ public class exceptionTest {
         a = clavier.nextInt();
         System.out.println("b =");
         b = clavier.nextInt();
-        res = a / b;
-        System.out.println(a + " / " + b + " = " + res);
-        clavier.close();
-        System.out.println ("Fin du programme") ;
+        try {
+            res = a / b;
+            System.out.println(a + " / " + b + " = " + res);
+        } catch (ArithmeticException e) {
+            System.out.println("oops ! un problème dans la division");
+            System.out.println("le message officiel est " + e.getMessage());
         }
+        clavier.close();
+        System.out.println("Fin du programme");
+    }
 }
