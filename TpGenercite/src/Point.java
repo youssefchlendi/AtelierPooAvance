@@ -24,10 +24,8 @@ public class Point<T> {
 
     @Override
     public String toString() {
-        return "Point{" +
-                "ord=" + ord +
-                ", abs=" + abs +
-                '}';
+        return  "ord=" + ord +
+                ", abs=" + abs;
     }
     public static void main(String[] args) throws Exception {
         Point<Integer> p1 = new Point<>(1,2);
@@ -36,6 +34,9 @@ public class Point<T> {
         System.out.println(p1);
         System.out.println(p2);
         System.out.println(p3);
+
+        PointColoreNG p4 = new PointColoreNG(1,2,"red");
+        System.out.println(p4);
     }
 
    
