@@ -37,6 +37,19 @@ public class Point<T> {
 
         PointColoreNG p4 = new PointColoreNG(1,2,"red");
         System.out.println(p4);
+
+        PointColore<Integer,String> p5 = new PointColore<>(1,2,"red");
+        System.out.println(p5);
+
+        PointColore<Double,CouleurRVB> p6 = new PointColore<>(3.0,4.0,new CouleurRVB(255,0,0));
+        System.out.println(p6);
+
+        Cercle<Integer> c1 = new Cercle<>(5,p1);
+        System.out.println(c1);
+
+        CercleAvecRestriction<Point<Integer>> c2 = new CercleAvecRestriction<>(5,p1);
+        System.out.println(c2);
+
     }
 
    
