@@ -21,6 +21,19 @@ public class Authentification {
         clavier.close();
 	}
     
+	public void getUserPwd() throws wrongInputLength, wrongPasswordException {
+		Scanner clavier = new Scanner(System.in);
+		System.out.println("Donner votre mot de passe");
+		this.pwd = clavier.nextLine();
+		if (this.pwd.length()>10) {
+			throw new wrongInputLength();
+		}
+		if (!this.pwd.equals(this.PwdCorrect)) {
+			throw new wrongPasswordException();
+		}
+        clavier.close();
+
+	}
 
 
 }
