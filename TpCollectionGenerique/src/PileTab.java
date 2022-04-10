@@ -1,49 +1,43 @@
-public class PileTab {
-    int pos;
-    int[] tab;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class PileTab<T> {
+    ArrayList <T> tab;
 
     public PileTab() {
-        tab = new int[4];
-        this.pos = 0;
+        tab = new ArrayList<>();
     }
 
-    public void add(int e) {
-        if (this.pos == tab.length) {
-            System.out.println("Ajout impossible de " + e);
-            // System.exit(-1);
-        } else {
-            tab[this.pos] = e;
-            this.pos++;
-        }
+    public void add(T e) {
+        tab.add(e);
     }
 
-    public int remove() {
-        int elem = tab[this.pos - 1];
-        this.pos--;
-        return elem;
+    public T remove() {
+        return tab.remove(tab.size() - 1);
     }
 
     public boolean estVide() {
-        return this.pos == 0;
+        return tab.size() == 0;
     }
 
     public int size() {
-        return this.pos;
+        return tab.size();
     }
 
     public void affiche() {
-        for (int i = 0; i < this.pos; i++) {
-            System.out.println(this.tab[i]);
+        Iterator<T> it = tab.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
         }
     }
 
-    public int getSommet() {
-        return this.tab[pos - 1];
+    public T getSommet() {
+        return this.tab.get(tab.size() - 1);
     }
 
     // main
     public static void main(String[] args) {
-        PileTab pile = new PileTab();
+        PileTab<Integer> pile = new PileTab<>();
         pile.add(1);
         pile.add(2);
         pile.add(3);
