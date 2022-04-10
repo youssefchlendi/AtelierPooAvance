@@ -40,4 +40,34 @@ public class PileTab {
     public int getSommet() {
         return this.tab[pos - 1];
     }
+
+    // main
+    public static void main(String[] args) {
+        PileTab pile = new PileTab();
+        pile.add(1);
+        pile.add(2);
+        pile.add(3);
+        pile.add(4);
+        pile.add(5);
+        pile.affiche();
+        System.out.println("Sommet : " + pile.getSommet());
+        System.out.println("Taille : " + pile.size());
+        System.out.println("Retrait : " + pile.remove());
+        pile.affiche();
+        System.out.println("Sommet : " + pile.getSommet());
+        System.out.println("Taille : " + pile.size());
+        System.out.println("Retrait : " + pile.remove());
+        pile.affiche();
+        System.out.println("Sommet : " + pile.getSommet());
+        System.out.println("Taille : " + pile.size());
+        System.out.println("Retrait : " + pile.remove());
+        pile.affiche();
+        System.out.println("Sommet : " + pile.getSommet());
+        System.out.println("Taille : " + pile.size());
+        System.out.println("Retrait : " + pile.remove());
+        pile.affiche();
+
+
+
+    }
 }
