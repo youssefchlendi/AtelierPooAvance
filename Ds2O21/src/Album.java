@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class Album {
@@ -43,5 +44,9 @@ public class Album {
             tot+=chan.getDurée();
         }
         return tot;
+    }
+
+    public void trierParPiste(){
+        Collections.sort(this.tab,new DureeComparator());
     }
 }
